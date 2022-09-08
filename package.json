@@ -1,0 +1,29 @@
+{
+  "name": "@optimizely/vue-utils",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "prepare": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/optimizely/vue-utils.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/optimizely/vue-utils/issues"
+  },
+  "homepage": "https://github.com/optimizely/vue-utils#readme",
+  "peerDependencies": {
+    "@optimizely/optimizely-sdk": "^4.9.2",
+    "vue": "^3.2.39"
+  },
+  "devDependencies": {
+    "rollup": "^2.79.0",
+    "typescript": "^4.8.3"
+  }
+}
