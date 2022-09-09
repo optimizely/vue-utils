@@ -1,6 +1,6 @@
 # Vue Utilities for Optimizely Javascript SDK
 
-Optimizely [Javascript SDK](https://github.com/optimizely/javascript-sdk/tree/master/packages/optimizely-sdk)is fully compatible with Vue JS. This set of utilities provide a light weight wrapper over Javascript SDK to enhance its functionality.
+Optimizely [Javascript SDK](https://github.com/optimizely/javascript-sdk/tree/master/packages/optimizely-sdk) is fully compatible with Vue JS. This set of utilities provide a light weight wrapper over Javascript SDK to enhance its functionality.
 
 1. It Initializes the Optimizely Instance at App level and makes it available for all the child components for easy use.
 2. It provides memoization of user id and attributes throughout the applicaiton lifecycle.
@@ -43,7 +43,7 @@ registerOptimizely(
 
 ### useDecision Composable / Hook
 
-The previous step will initialize and make optimizely sdk instance available for all the components along with user information. the components can the use `useDecision` to get the decision. `useDecision` is auto updatable by default. This means if `autoUpdate` datafile option is true and you make any changes to the optimizley project, `useDecision` will re-evaluate and it will automatically re-render the component.
+The previous step will initialize and make optimizely sdk instance available for all the components along with user information. Any child component can use `useDecision` to get the decision. `useDecision` is auto updatable by default. This means if `autoUpdate` datafile option is true and you make any changes to the optimizley project, `useDecision` will re-evaluate and it will automatically re-render the component.
 
 ```
 <script setup lang="ts">
