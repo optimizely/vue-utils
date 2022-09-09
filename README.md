@@ -13,7 +13,7 @@ Optimizely [Javascript SDK](https://github.com/optimizely/javascript-sdk/tree/ma
 
 This package is not available on npm yet so it needs to be installed directly from Github Repo.
 
-```
+```bash
 npm install https://github.com/optimizely/vue-utils.git
 ```
 
@@ -23,7 +23,7 @@ Note: This package uses `@optimizely/optimizely-sdk` as a peer dependency which 
 
 Vue JS has a root App object which is created using `creatApp` function. This package provides a `registerOptimizely` function which takes `app` as an argument along with `userId`, `attributes` and other optimizely sdk options, creates an optimizely instance and registers that with the given Vue App using `Providers`. This makes the `OptimizelyWrapper` available to all the child components for convenient access along with user information.
 
-```
+```typescript
 import { registerOptimizely } from "@optimizely/vue-utils";
 
 const app = createApp(App);
@@ -45,7 +45,7 @@ registerOptimizely(
 
 The previous step will initialize and make optimizely sdk instance available for all the components along with user information. Any child component can use `useDecision` to get the decision. `useDecision` is auto updatable by default. This means if `autoUpdate` datafile option is true and you make any changes to the optimizley project, `useDecision` will re-evaluate and it will automatically re-render the component.
 
-```
+```typescript
 <script setup lang="ts">
   import { useDecision } from "@optimizely/vue-utils";
 
@@ -65,7 +65,7 @@ The resulting `decision` object can be used in the template to conditionally ren
 
 The user is memoized at initialization time. If it needs to be changed later, it can be done by accessing `setUser` method on `OptimizelyWrapper`. `OptimizelyWrapper` can be accessed in any component by calling `getOptimizelyWrapper` method.
 
-```
+```typescript
 <script setup lang="ts">
   import { getOptimizelyWrapper } from "@optimizely/vue-utils";  
 
@@ -80,7 +80,7 @@ Calling `setUser` will autoupdate and re-evaluate all the `useDecision` hooks th
 
 If a user needs access to the regular Optimizely Client instance provided by the original javascript SDK, It can be done by calling `getOptimizelyClient` method.
 
-```
+```typescript
 <script setup lang="ts">
   import { getOptimizelyClient } from "@optimizely/vue-utils";
   
